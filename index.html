@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My To-Do List</h1>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter a new task..." required />
+      <input type="date" id="todo-date" required />
+      <input type="time" id="todo-time" required />
+      <select id="todo-priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Sorting and Filtering -->
+    <div class="controls">
+      <div class="filters">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="active" class="filter-btn">Active</button>
+        <button data-filter="completed" class="filter-btn">Completed</button>
+      </div>
+      <select id="sort-by">
+        <option value="none">Sort By</option>
+        <option value="due">Due Date</option>
+        <option value="priority">Priority</option>
+      </select>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <!-- Summary -->
+    <div class="summary" id="summary"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
